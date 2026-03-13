@@ -21,8 +21,15 @@
             --text-muted: #7A7067;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -206,8 +213,13 @@
             transition: width 0.3s;
         }
 
-        .nav-inner a:hover::after { width: 100%; }
-        .nav-inner a:hover { color: var(--gold); }
+        .nav-inner a:hover::after {
+            width: 100%;
+        }
+
+        .nav-inner a:hover {
+            color: var(--gold);
+        }
 
         /* SECTION HEADERS */
         .section-header {
@@ -321,14 +333,6 @@
             line-height: 1.6;
         }
 
-        .menu-card-body .add-on {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.8rem;
-            color: var(--rust);
-            margin-top: 0.6rem;
-            font-weight: 500;
-        }
-
         /* EXTRAS / ADD-ONS */
         .extras-section {
             background: var(--dark);
@@ -417,7 +421,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 4rem;
+            padding: 4rem 4rem;
         }
 
         .bagels-content h2 {
@@ -444,7 +448,9 @@
             border-bottom: 1px solid rgba(61, 43, 31, 0.1);
         }
 
-        .bagel-price-row:last-child { border-bottom: none; }
+        .bagel-price-row:last-child {
+            border-bottom: none;
+        }
 
         .bagel-price-row .item-name {
             font-family: 'DM Sans', sans-serif;
@@ -460,83 +466,9 @@
             font-size: 1.25rem;
         }
 
-        /* SIDES SECTION */
-        .sides-dark {
-            background: var(--brown);
-            padding: 5rem 2rem;
-        }
-
-        .sides-dark .section-header-dark {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .sides-dark .section-header-dark h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            color: var(--warm-white);
-            margin-bottom: 0.5rem;
-        }
-
-        .sides-dark .section-header-dark p {
-            font-family: 'Lora', serif;
-            font-style: italic;
-            color: var(--gold);
-            font-size: 1.1rem;
-        }
-
-        .sides-dark .section-header-dark .section-divider {
-            background: var(--gold);
-        }
-
-        .sides-columns {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .sides-column h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(196, 145, 58, 0.3);
-        }
-
-        .side-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.9rem 0;
-            border-bottom: 1px solid rgba(255, 248, 240, 0.06);
-        }
-
-        .side-row:last-child { border-bottom: none; }
-
-        .side-row .side-name {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 500;
-            color: rgba(255, 248, 240, 0.85);
-            font-size: 1rem;
-        }
-
-        .side-row .side-price {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: var(--gold);
-            font-size: 1.15rem;
-            white-space: nowrap;
-            margin-left: 1rem;
-        }
-
         /* CONTACT / FOOTER */
         .contact-section {
-            background: var(--dark);
+            background: var(--brown);
             padding: 5rem 2rem;
             text-align: center;
         }
@@ -571,10 +503,12 @@
             transition: opacity 0.3s;
         }
 
-        .contact-phone:hover { opacity: 0.8; }
+        .contact-phone:hover {
+            opacity: 0.8;
+        }
 
         .footer {
-            background: #0F0D0A;
+            background: var(--dark);
             text-align: center;
             padding: 2rem;
         }
@@ -587,20 +521,40 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            .menu-grid { grid-template-columns: 1fr; }
-            .bagels-inner { grid-template-columns: 1fr; }
-            .bagels-image { height: 350px; }
-            .bagels-content { padding: 3rem 2rem; }
-            .nav-inner { gap: 1.5rem; }
-            .nav-inner a { font-size: 0.7rem; }
-            .sides-columns { grid-template-columns: 1fr; gap: 2rem; }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .bagels-inner {
+                grid-template-columns: 1fr;
+            }
+            .bagels-image {
+                height: 350px;
+            }
+            .bagels-content {
+                padding: 3rem 2rem;
+            }
+            .nav-inner {
+                gap: 1.5rem;
+            }
+            .nav-inner a {
+                font-size: 0.7rem;
+            }
         }
 
         @media (max-width: 500px) {
-            .menu-grid { grid-template-columns: 1fr; }
-            .menu-card-image { height: 260px; }
-            .hero h1 { font-size: 3rem; }
-            .nav-inner { gap: 1rem; flex-wrap: wrap; }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .menu-card-image {
+                height: 260px;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .nav-inner {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -610,7 +564,7 @@
     <section class="hero">
         <div class="hero-images">
             <img src="images/IMG_3762.jpeg" alt="">
-            <img src="images/IMG_3760.jpeg" alt="">
+            <img src="images/IMG_3950.jpeg" alt="">
             <img src="images/IMG_3765.jpeg" alt="">
         </div>
         <div class="hero-content">
@@ -631,8 +585,8 @@
     <nav>
         <div class="nav-inner">
             <a href="#breakfast">Breakfast</a>
-            <a href="#bagels">Bagels</a>
             <a href="#sandwiches">Lunch</a>
+            <a href="#bagels">Bagels</a>
             <a href="#sides">Sides</a>
             <a href="#contact">Visit Us</a>
         </div>
@@ -650,30 +604,30 @@
             <div class="menu-grid">
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/IMG_3809.jpeg" alt="Breakfast Sandwich on Bagel">
-                        <div class="price-tag">$5.00</div>
+                        <img src="images/IMG_3809.jpeg" alt="2 Eggs and Cheese on Bagel">
+                        <div class="price-tag">$4.25</div>
                     </div>
                     <div class="menu-card-body">
-                        <h3>Breakfast Sandwich</h3>
-                        <p>Two fried eggs with your choice of bacon, sausage, pork roll, or ham, topped with yellow American cheese. Served on a bagel, kaiser, English muffin, toast, or wrap. Scrambled or egg whites available on request.</p>
+                        <h3>2 Eggs &amp; Cheese</h3>
+                        <p>Two fried eggs with American cheese on bagel, kaiser, English muffin, toast, or wrap. Scrambled or egg whites available on request.</p>
                     </div>
                 </div>
 
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/IMG_3762.jpeg" alt="Pork Roll Egg and Cheese on Everything Bagel">
+                        <img src="images/IMG_3762.jpeg" alt="Breakfast Sandwich">
                         <div class="price-tag">$5.00</div>
                     </div>
                     <div class="menu-card-body">
-                        <h3>Pork Roll, Egg &amp; Cheese</h3>
-                        <p>A true Jersey classic. Crispy pork roll with a runny fried egg and melted American cheese on a toasted everything bagel. There's nothing quite like it.</p>
+                        <h3>Breakfast Sandwich</h3>
+                        <p>Two fried eggs with choice of bacon, sausage, pork roll, or ham, topped with American cheese. On bagel, kaiser, English muffin, toast, or wrap.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- BREAKFAST EXTRAS -->
+    <!-- EXTRAS -->
     <section class="extras-section">
         <h2>Make It Your Own</h2>
         <p class="subtitle">Customize any breakfast sandwich</p>
@@ -720,7 +674,7 @@
         </section>
     </div>
 
-    <!-- LUNCH SANDWICHES -->
+    <!-- SANDWICHES -->
     <div id="sandwiches">
         <div class="section-header">
             <h2>Lunch</h2>
@@ -730,15 +684,14 @@
 
         <div class="menu-section">
             <div class="menu-grid">
-
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/IMG_3758.jpeg" alt="Chopped Cheese on a Hoagie Roll">
+                        <img src="images/IMG_3758.jpeg" alt="Chop Cheese Sub">
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
                         <h3>Chop Cheese</h3>
-                        <p>Ground beef with melted American cheese, lettuce, tomato, onion, ketchup, and mayo on a hoagie roll.</p>
+                        <p>Ground beef, melted American, lettuce, tomato, onion, ketchup &amp; mayo on hoagie.</p>
                     </div>
                 </div>
 
@@ -749,41 +702,40 @@
                     </div>
                     <div class="menu-card-body">
                         <h3>Reuben</h3>
-                        <p>Classic corned beef with Swiss cheese, Russian dressing, and sauerkraut. Served hot on grilled rye bread.</p>
+                        <p>Corned beef, Swiss, Russian dressing, sauerkraut on grilled rye.</p>
                     </div>
                 </div>
 
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/F57AF51E-D73E-4A09-808B-032FD7B82A2E.png" alt="Hot Pastrami Rachel Sandwich">
+                        <img src="images/F57AF51E-D73E-4A09-808B-032FD7B82A2E.png" alt="Hot Pastrami Rachel">
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
                         <h3>Hot Pastrami Rachel</h3>
-                        <p>Pastrami or turkey with melted Swiss cheese, Russian dressing, and coleslaw. Served hot on rye bread.</p>
+                        <p>Pastrami or turkey, Swiss, Russian dressing, coleslaw on rye.</p>
                     </div>
                 </div>
 
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/IMG_3821.jpeg" alt="Cold Turkey Rachel Sandwich">
+                        <img src="images/IMG_3821.jpeg" alt="Cold Rachel Sandwich">
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
                         <h3>Cold Rachel</h3>
-                        <p>Pastrami or turkey with Swiss cheese, Russian dressing, and coleslaw. Served cold on rye bread.</p>
+                        <p>Pastrami or turkey, Swiss, Russian dressing, coleslaw, cold on rye.</p>
                     </div>
                 </div>
 
                 <div class="menu-card">
                     <div class="menu-card-image">
-                        <img src="images/IMG_3765.jpeg" alt="Italian Sub">
+                        <img src="images/IMG_3950.jpeg" alt="Italian Sub">
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
                         <h3>Italian</h3>
-                        <p>Deluxe ham, cappy ham, hard salami, and provolone with oil and vinegar, lettuce, tomato, and onion. Served on a hoagie roll.</p>
-                        <div class="add-on">Half size available: $5.50</div>
+                        <p>Deluxe ham, cappy ham, hard salami, provolone, oil &amp; vinegar on hoagie. Half: $5.50</p>
                     </div>
                 </div>
 
@@ -794,8 +746,7 @@
                     </div>
                     <div class="menu-card-body">
                         <h3>Club Sandwich</h3>
-                        <p>Choice of ovengold turkey, ham, or roast beef with bacon, mayo, lettuce, and tomato. Served on 3 toasted slices of your choice of bread.</p>
-                        <div class="add-on">Add cheese: $1.50</div>
+                        <p>Turkey, ham, or roast beef with bacon, mayo, lettuce, tomato. Add cheese: $1.50</p>
                     </div>
                 </div>
 
@@ -806,8 +757,7 @@
                     </div>
                     <div class="menu-card-body">
                         <h3>BLT</h3>
-                        <p>Crispy bacon, lettuce, tomato, and mayo. Served on your choice of toast.</p>
-                        <div class="add-on">Add cheese: $1.50 · Extra bacon: $1.75</div>
+                        <p>Crispy bacon, lettuce, tomato, mayo on toast. Add cheese $1.50 &middot; Extra bacon $1.75</p>
                     </div>
                 </div>
 
@@ -817,8 +767,8 @@
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
-                        <h3>Chicken Salad Sandwich</h3>
-                        <p>Homemade chicken salad tossed with dried cranberries and walnuts, layered with fresh greens on your choice of bread.</p>
+                        <h3>Chicken Salad</h3>
+                        <p>Homemade with cranberries &amp; walnuts, fresh greens.</p>
                     </div>
                 </div>
 
@@ -828,66 +778,55 @@
                         <div class="price-tag">$8.99</div>
                     </div>
                     <div class="menu-card-body">
-                        <h3>Egg Salad Sandwich</h3>
-                        <p>Classic creamy egg salad with crisp lettuce and fresh tomato slices, served on hearty multigrain bread.</p>
+                        <h3>Egg Salad</h3>
+                        <p>Classic creamy egg salad, lettuce, tomato on multigrain.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- SIDES -->
     <div id="sides">
-        <section class="sides-dark">
-            <div class="section-header-dark">
-                <h2>Sides</h2>
-                <p>The perfect addition to any meal</p>
-                <div class="section-divider"></div>
-            </div>
+        <div class="section-header">
+            <h2>Sides</h2>
+            <p>The perfect addition</p>
+            <div class="section-divider"></div>
+        </div>
 
-            <div class="sides-columns">
-                <div class="sides-column">
-                    <h3>Hot Sides</h3>
-                    <div class="side-row">
-                        <span class="side-name">French Fries</span>
-                        <span class="side-price">$3.00</span>
+        <section class="extras-section" style="padding-top: 0; padding-bottom: 5rem;">
+            <div class="extras-grid" style="max-width: 1100px;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--gold);">Hot</h2>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">French Fries</span><span class="extra-price">$3.00</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Pierogies (3)</span>
-                        <span class="side-price">$3.00</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Pierogies (3)</span><span class="extra-price">$3.00</span>
+                    </div>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%;">
+                        <span class="extra-name">Breaded Chicken Bites</span><span class="extra-price">$5.00</span>
                     </div>
                 </div>
-
-                <div class="sides-column">
-                    <h3>8 oz Containers</h3>
-                    <div class="side-row">
-                        <span class="side-name">Coleslaw</span>
-                        <span class="side-price">$3.50</span>
+                <div style="flex: 1; min-width: 280px;">
+                    <h2 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--gold);">8 oz Containers</h2>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Coleslaw</span><span class="extra-price">$3.50</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Redskin Potato Salad</span>
-                        <span class="side-price">$3.50</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Potato Salad</span><span class="extra-price">$3.50</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Macaroni Salad</span>
-                        <span class="side-price">$3.50</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Macaroni Salad</span><span class="extra-price">$3.50</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Egg Salad</span>
-                        <span class="side-price">$4.50</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Egg Salad</span><span class="extra-price">$4.50</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Tuna Salad</span>
-                        <span class="side-price">$5.50</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%; margin-bottom: 0.75rem;">
+                        <span class="extra-name">Tuna Salad</span><span class="extra-price">$5.50</span>
                     </div>
-                    <div class="side-row">
-                        <span class="side-name">Chicken Salad</span>
-                        <span class="side-price">$5.50</span>
-                    </div>
-                    <div class="side-row">
-                        <span class="side-name">Chicken Salad w/ Cranberries &amp; Walnuts</span>
-                        <span class="side-price">$5.50</span>
+                    <div class="extra-item" style="display: flex; justify-content: space-between; width: 100%;">
+                        <span class="extra-name">Chicken Salad</span><span class="extra-price">$5.50</span>
                     </div>
                 </div>
             </div>
@@ -905,10 +844,12 @@
     </section>
 
     <footer class="footer">
+        <p style="margin-bottom: 0.5rem; color: rgba(255,248,240,0.4); font-style: italic; font-family: 'Lora', serif; font-size: 0.85rem;">Prices subject to change &middot; Thank you for your business!</p>
         <p>&copy; 2025 Countryside Deli. All rights reserved.</p>
     </footer>
 
     <script>
+        // Scroll animation for menu cards
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -922,6 +863,7 @@
 
         document.querySelectorAll('.menu-card').forEach(card => observer.observe(card));
 
+        // Smooth nav active state
         const sections = document.querySelectorAll('[id]');
         const navLinks = document.querySelectorAll('.nav-inner a');
 
